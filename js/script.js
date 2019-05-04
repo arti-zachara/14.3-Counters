@@ -42,6 +42,7 @@ var Counter = React.createClass({
     console.log(
       "shouldComponentUpdate: Sprawdzenie, czy komponent wymaga ponownego renderowania"
     );
+    return true;
   },
   componentWillUpdate: function() {
     console.log(
@@ -78,5 +79,18 @@ var Counter = React.createClass({
   }
 });
 
-var element = React.createElement(Counter);
+// create 3 counters
+var counters = React.createClass({
+  render: function() {
+    return React.createElement(
+      "div",
+      { className: "counters" },
+      React.createElement(Counter, {}),
+      React.createElement(Counter, {}),
+      React.createElement(Counter, {})
+    );
+  }
+});
+
+var element = React.createElement(counters);
 ReactDOM.render(element, document.getElementById("app"));
