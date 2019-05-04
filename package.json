@@ -2,7 +2,7 @@
   "name": "14.3",
   "version": "1.0.0",
   "description": "Kodilla task 14.6 - Counters: React JSX",
-  "main": "index.html",
+  "main": "index.js",
   "scripts": {
     "test": "npm-run-all test:js test:index",
     "test:index": "html-validator --file=index.html --verbose",
