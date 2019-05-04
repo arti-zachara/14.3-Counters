@@ -1,0 +1,57 @@
+$backgroundDark: rgb(202, 182, 182);
+$backgroundLight: rgb(243, 227, 227);
+$borderDark: rgb(134, 123, 123);
+$borderLight: rgb(161, 155, 155);
+$buttonIncrement: rgb(65, 177, 89);
+$buttonIncrementHover: rgb(39, 134, 60);
+$buttonDecrement: rgb(206, 55, 55);
+$buttonDecrementHover: rgb(170, 32, 32);
+
+body {
+  font-family: "Metrophobic", sans-serif;
+  margin: 0;
+  background-color: $backgroundDark;
+}
+.counter {
+  display: block;
+  width: 80vw;
+  max-width: 400px;
+  height: 130px;
+  background-color: $backgroundLight;
+  margin: 10px auto;
+  border: 2px solid $borderLight;
+  padding: 20px;
+  span {
+    display: block;
+    width: 80%;
+    max-width: 300px;
+    border: 2px solid $borderDark;
+    background-color: white;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+  }
+  button {
+    width: 120px;
+    height: 40px;
+    border: none;
+    color: white;
+  }
+  .buttonIncrement {
+    background-color: $buttonIncrement;
+    float: left;
+    &hover {
+      background-color: $buttonIncrementHover;
+    }
+  }
+  .buttonDecrement {
+    background-color: $buttonDecrement;
+    float: right;
+    &hover {
+      background-color: $buttonDecrementHover;
+    }
+  }
+}
